@@ -1,0 +1,184 @@
+body {
+    background-image: url(asset/bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px;
+    height: 50px;
+}
+
+.navbar .logo p{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Bangers", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: none;
+}
+
+.navbar .logo p span {
+    color: gold;
+    text-shadow: 2px 4px 20px rgba(255, 227, 135, 0.5);
+    font-size: 25px;
+    font-family: "Bangers", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu {
+    position: relative;
+  }
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .dropdown {
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 10px 0;
+    width: 100px;
+  }
+  .dropdown a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+  }
+  .dropdown a:hover {
+    background-color: #555;
+  }
+  .show {
+    display: block;
+  }
+
+.hide {
+    display: none;
+}
+
+/* TEXT  */
+.judul {
+  justify-content: center;
+  display: flex;
+  margin-top: 80px;
+}
+
+.text {
+  text-align: center;
+}
+
+.text h1 {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Bangers", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.text h1 span {
+  color: gold;
+  text-shadow: 0 0 20px gold;
+}
+
+.text p {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  font-size: 30px;
+  width: 300px;
+  margin-top: -20px;
+}
+
+.tombol {
+  display: flex;
+  justify-content: center;
+}
+
+.tombol a {
+  /* padding: 10px; */
+  width: 100px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid gold;
+  text-align: center;
+  color: gold;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: .1s ease-in-out;
+}
+
+.tombol a:hover {
+  background-color: gold;
+  color: #555;
+  box-shadow: 0 0 20px gold;
+}
+
+.tombol a.btn1 {
+  margin-right: 10px;
+}
+
+.tombol a.btn2 {
+  margin-left: 10px;
+}
+
+/* ABOUT */
+.about {
+  margin-top: 700px;
+}
+
+h1.judul {
+  font-size: 20px;
+  text-align: center;
+  color: #111;
+  font-family: "Bangers", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+.isiabout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.isiabout .gambar{
+  border-radius: 10px;
+  margin-right: 20PX;
+}
+
+.isiabout .gambar img {
+  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.4);
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.isiabout .textabout {
+  text-align: left;
+}
+
+.isiabout .textabout p {
+  font-size: 12px;
+  font-weight: 200;
+}
