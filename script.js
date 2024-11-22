@@ -20,3 +20,16 @@ window.onclick = function(event) {
     }
   }
 }
+
+const box = document.querySelector('.gambar');
+let hasMoved = false;
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  const triggerPoint = 200;
+
+  if (scrollPosition > triggerPoint && !hasMoved) {
+    box.style.left = '200px';
+    hasMoved = true;
+  }
+})

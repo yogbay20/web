@@ -3,6 +3,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
   background-color: antiquewhite;
 }
 
@@ -15,7 +16,6 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 .navbar {
@@ -152,7 +152,8 @@ body {
 
 /* ABOUT */
 .about {
-  margin-top: 10px;
+  padding-top: 10px;
+  background: linear-gradient(to bottom, antiquewhite, #ffffff);
 }
 
 h1.judul {
@@ -172,19 +173,26 @@ h1.judul {
 }
 
 .isiabout .gambar{
+  left: 0;
+  position: absolute;
   border-radius: 10px;
-  margin-right: 20PX;
+  /* margin-right: 20PX; */
+  /* margin-bottom: -0px; */
+  margin-left: 20px;
+  transition: left 3s ease;
 }
 
 .isiabout .gambar img {
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.4);
-  width: 150px;
+  width: 200px;
   height: auto;
   border-radius: 10px;
 }
 
 .isiabout .textabout {
   text-align: left;
+  width: 200px;
+  margin-right: 240px;
 }
 
 .isiabout .textabout p {
