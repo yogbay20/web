@@ -152,7 +152,7 @@ body {
 /* ABOUT */
 .about {
   padding-top: 10px;
-  background: linear-gradient(to bottom, antiquewhite, #ffffff);
+  /* background: linear-gradient(to bottom, antiquewhite, #ffffff); */
   padding-bottom: 50px;
   margin-bottom: 30px;
 }
@@ -181,7 +181,7 @@ h1.judul {
 
 .isiabout .gambar img {
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.4);
-  width: 200px;
+  width: 120px;
   height: auto;
   border-radius: 10px;
 }
