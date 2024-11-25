@@ -26,10 +26,10 @@ let hasMoved = false;
 
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
-  const triggerPoint = 200;
+  const triggerPoint = 150;
 
   if (scrollPosition > triggerPoint && !hasMoved) {
-    box.style.left = '200px';
+    box.style.top = '200px';
     hasMoved = true;
   }
 })

@@ -154,6 +154,7 @@ body {
 .about {
   padding-top: 10px;
   background: linear-gradient(to bottom, antiquewhite, #ffffff);
+  padding-bottom: 50px;
 }
 
 h1.judul {
@@ -173,13 +174,9 @@ h1.judul {
 }
 
 .isiabout .gambar{
-  left: 0;
-  position: absolute;
+  margin-right: 20px;
+  margin-left: 10px;
   border-radius: 10px;
-  /* margin-right: 20PX; */
-  /* margin-bottom: -0px; */
-  margin-left: 20px;
-  transition: left 3s ease;
 }
 
 .isiabout .gambar img {
@@ -191,8 +188,6 @@ h1.judul {
 
 .isiabout .textabout {
   text-align: left;
-  width: 250px;
-  margin-right: 200px;
 }
 
 .isiabout .textabout p {
