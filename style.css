@@ -174,9 +174,9 @@ h1.judul {
 }
 
 .isiabout .gambar{
-  margin-right: 20px;
-  margin-left: 10px;
   border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 
 .isiabout .gambar img {

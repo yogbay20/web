@@ -21,15 +21,6 @@ window.onclick = function(event) {
   }
 }
 
-const box = document.querySelector('.gambar');
-let hasMoved = false;
 
-window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY;
-  const triggerPoint = 150;
 
-  if (scrollPosition > triggerPoint && !hasMoved) {
-    box.style.top = '200px';
-    hasMoved = true;
-  }
-})
+
