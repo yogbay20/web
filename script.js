@@ -21,6 +21,17 @@ window.onclick = function(event) {
   }
 }
 
+const neonBox = document.querySelector('.neon-box');
+
+// Ubah durasi animasi setelah 5 detik
+setTimeout(() => {
+  neonBox.style.animationDuration = '1.5s'; // Percepat animasi
+}, 5000);
+
+// Ubah warna border secara dinamis
+setTimeout(() => {
+  neonBox.style.borderImage = 'linear-gradient(45deg, red, green, blue, red) 1';
+}, 10000);
 
 
 

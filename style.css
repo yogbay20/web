@@ -152,8 +152,9 @@ body {
 /* ABOUT */
 .about {
   padding-top: 10px;
-  /* background: linear-gradient(to bottom, antiquewhite, #ffffff); */
+  background: linear-gradient(to bottom, antiquewhite, #ffffff);
   padding-bottom: 50px;
+  height: 10px;
 }
 
 h1.judul {
@@ -192,4 +193,23 @@ h1.judul {
 .isiabout .textabout p {
   font-size: 12px;
   font-weight: 200;
+}
+
+.neon-box {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  background-color: #000;
+  border: 4px solid transparent;
+  border-image: linear-gradient(90deg, cyan, magenta, yellow, cyan) 1;
+  animation: border-animate 3s linear infinite;
+}
+
+@keyframes border-animate {
+  0% {
+    border-image-source: linear-gradient(90deg, cyan, magenta, yellow, cyan);
+  }
+  100% {
+    border-image-source: linear-gradient(450deg, cyan, magenta, yellow, cyan);
+  }
 }
