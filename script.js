@@ -21,17 +21,22 @@ window.onclick = function(event) {
   }
 }
 
-const neonBox = document.querySelector('.neon-box');
+// script.js
+const track = document.querySelector('.carousel-track');
+const boxes = document.querySelectorAll('.box');
+const totalBoxes = boxes.length;
 
-// Ubah durasi animasi setelah 5 detik
-setTimeout(() => {
-  neonBox.style.animationDuration = '1.5s'; // Percepat animasi
-}, 5000);
+let currentIndex = 0;
 
-// Ubah warna border secara dinamis
-setTimeout(() => {
-  neonBox.style.borderImage = 'linear-gradient(45deg, red, green, blue, red) 1';
-}, 10000);
+function moveCarousel() {
+    currentIndex = (currentIndex + 1) % totalBoxes;
+    const translateX = -currentIndex * 100; // Geser per box (100% lebar)
+    track.style.transform = `translateX(${translateX}%)`;
+}
+
+// Pindah otomatis setiap 2 detik
+setInterval(moveCarousel, 2000);
+
 
 
 
