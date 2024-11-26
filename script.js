@@ -38,5 +38,52 @@ function moveCarousel() {
 setInterval(moveCarousel, 2000);
 
 
+// script.js
+const container = document.querySelector('.touch-container');
+let startX = 0; // Posisi awal saat sentuhan dimulai
+let currentTranslate = 0; // Posisi translate saat ini
+let prevTranslate = 0; // Posisi translate sebelumnya
+let isDragging = false; // Status sentuhan aktif
+
+// Menangani sentuhan awal
+container.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX; // Posisi awal sentuhan (x-axis)
+    isDragging = true;
+});
+
+// Menangani pergerakan sentuhan
+container.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    const movementX = currentX - startX;
+    currentTranslate = prevTranslate + movementX;
+
+    // Menggeser box sesuai pergerakan sentuhan
+    container.style.transform = `translateX(${currentTranslate}px)`;
+});
+
+// Menangani akhir sentuhan
+container.addEventListener('touchend', () => {
+    isDragging = false;
+    prevTranslate = currentTranslate;
+
+    // Opsi: Batasi geser ke kiri/kanan agar tidak keluar dari area kontainer
+    const maxScroll = -(container.scrollWidth - container.clientWidth); // Geser maksimal
+    if (currentTranslate > 0) {
+        currentTranslate = 0;
+    } else if (currentTranslate < maxScroll) {
+        currentTranslate = maxScroll;
+    }
+
+    // Kembalikan posisi ke batas terdekat
+    container.style.transition = 'transform 0.3s ease-out';
+    container.style.transform = `translateX(${currentTranslate}px)`;
+    prevTranslate = currentTranslate;
+
+    // Matikan transisi setelah animasi selesai
+    setTimeout(() => {
+        container.style.transition = 'none';
+    }, 300);
+});
 
 

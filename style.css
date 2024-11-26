@@ -280,3 +280,50 @@ h1.judul {
   background-color: rgb(43, 132, 206);
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.4);
 }
+
+/* SERVICE */
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.menu .box img {
+  width: 320px;
+  height: auto;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto; /* Memungkinkan scroll horizontal */
+  gap: 10px; /* Jarak antar box */
+  padding: 10px;
+  scroll-behavior: smooth; /* Transisi scroll lebih halus */
+  width: 320px; /* Lebar kontainer */
+  border-radius: 8px;
+  background: white;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px; /* Tinggi scrollbar */
+  background: #e0e0e0; /* Warna latar scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #007bff; /* Warna scrollbar */
+  border-radius: 4px;
+}
+
+.scroll-container.box {
+  flex: 0 0 auto; /* Mencegah box menyusut */
+  width: 150px; /* Lebar setiap box */
+  height: 150px; /* Tinggi setiap box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+}
