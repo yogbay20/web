@@ -38,7 +38,7 @@ function moveCarousel() {
 setInterval(moveCarousel, 2000);
 
 
-// script.js
+// // script.js
 const container = document.querySelector('.touch-container');
 let startX = 0; // Posisi awal saat sentuhan dimulai
 let currentTranslate = 0; // Posisi translate saat ini

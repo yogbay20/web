@@ -152,7 +152,7 @@ body {
 /* ABOUT */
 .about {
   padding-top: 10px;
-  /* background: linear-gradient(to bottom, antiquewhite, #ffffff); */
+  background: linear-gradient(to bottom, #ffffff, #fff, #fff, #fff, #ebebeb, #222);
   padding-bottom: 50px;
   margin-bottom: 30px;
 }
@@ -233,7 +233,7 @@ h1.judul {
   align-items: center;
   font-size: 1.5rem;
   color: white;
-  border-right: 2px solid white;
+  /* border-right: 2px solid white; */
   box-sizing: border-box;
 }
 
@@ -269,19 +269,38 @@ h1.judul {
 
 .tombolabout a {
   padding: 20px;
-  background-color: rgb(68, 171, 255);
+  /* background-color: rgb(68, 171, 255); */
+  background-color: gold;
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
+  color: #111;
   border-radius: 5px;
   transition: .1s ease-in-out;
 }
 
 .tombolabout a:hover {
-  background-color: rgb(43, 132, 206);
-  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.4);
+  /* background-color: rgb(43, 132, 206); */
+  /* box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.4); */
+  box-shadow: 0 0 20px gold;
 }
 
 /* SERVICE */
+
+.service {
+  background-color: #222;
+  margin-top: -30px;
+}
+
+h1.judulservice {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  font-family: "Bangers", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  padding-top: 30px;
+}
 
 .menu {
   display: flex;
@@ -289,7 +308,7 @@ h1.judul {
   padding-bottom: 50px;
 }
 
-.menu .box img {
+.menu .box1 img {
   width: 320px;
   height: auto;
 }
@@ -300,22 +319,21 @@ h1.judul {
   gap: 10px; /* Jarak antar box */
   padding: 10px;
   scroll-behavior: smooth; /* Transisi scroll lebih halus */
-  width: 320px; /* Lebar kontainer */
+  width: 450px; /* Lebar kontainer */
   border-radius: 8px;
-  background: white;
+  background: #222;
 }
 
 .scroll-container::-webkit-scrollbar {
   height: 8px; /* Tinggi scrollbar */
-  background: #e0e0e0; /* Warna latar scrollbar */
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
-  background: #007bff; /* Warna scrollbar */
+  background: rgb(219, 219, 219); /* Warna scrollbar */
   border-radius: 4px;
 }
 
-.scroll-container.box {
+.scroll-container.box1 {
   flex: 0 0 auto; /* Mencegah box menyusut */
   width: 150px; /* Lebar setiap box */
   height: 150px; /* Tinggi setiap box */
@@ -323,7 +341,28 @@ h1.judul {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  background: #007bff;
   color: white;
   border-radius: 8px;
+}
+
+.textservice p{
+  color: #fff;
+  margin-left: 10px;
+}
+
+.listservice {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.listsatu p{
+  margin-left: 23px;
+  margin-right: 23px;
+}
+
+.listsatu p span{
+  color: gold;
 }
