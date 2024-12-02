@@ -31,11 +31,11 @@ function toggleMenu() {
 
     if (!isMenuVisible) {
         menu.style.display = "block";
-        button.innerText = "Sembunyikan Menu";
+        button.innerText = "tutup";
         button.style.marginBottom = "20px";
     } else {
         menu.style.display = "none";
-        button.innerText = "Tampilkan Menu";
+        button.innerText = "Lihat";
         button.style.marginBottom = "0px";
     }
     isMenuVisible = !isMenuVisible;
