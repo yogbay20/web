@@ -1,31 +1,50 @@
-function toggleMenu() {
-  const dropdown = document.getElementById('dropdown');
-  dropdown.classList.toggle('show');
-  const button = document.getElementById('menu-btn');
-  button.classList.toggle('hide');
-}
-
-// Close the menu if clicked outside
-window.onclick = function(event) {
-  if (!event.target.matches('.menu-btn')) {
+// Toggle Menu untuk Dropdown
+function toggleList() {
     const dropdown = document.getElementById('dropdown');
-    if (dropdown.classList.contains('show')) {
-      dropdown.classList.remove('show');
+    dropdown.classList.toggle('show');
+    const button = document.getElementById('list-btn');
+    button.classList.toggle('hide');
+  }
+  
+  // Close the menu if clicked outside
+  window.onclick = function(event) {
+    if (!event.target.matches('.list-btn')) {
+      const dropdown = document.getElementById('dropdown');
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+    }
+    if (!event.target.matches('.list-btn')) {
+      const button = document.getElementById('list-btn');
+      if (button.classList.contains('hide')) {
+        button.classList.remove('hide');
+      }
     }
   }
-  if (!event.target.matches('.menu-btn')) {
-    const button = document.getElementById('menu-btn');
-    if (button.classList.contains('hide')) {
-      button.classList.remove('hide');
+
+
+// Toggle Menu
+let isMenuVisible = false;
+function toggleMenu() {
+    const menu = document.getElementById("menuContent");
+    const button = document.getElementById("btn-toggle-menu");
+
+    if (!isMenuVisible) {
+        menu.style.display = "block";
+        button.innerText = "Sembunyikan Menu";
+        button.style.marginBottom = "20px";
+    } else {
+        menu.style.display = "none";
+        button.innerText = "Tampilkan Menu";
+        button.style.marginBottom = "0px";
     }
-  }
+    isMenuVisible = !isMenuVisible;
 }
 
-// script.js
+// Carousel (Slider)
 const track = document.querySelector('.carousel-track');
 const boxes = document.querySelectorAll('.box');
 const totalBoxes = boxes.length;
-
 let currentIndex = 0;
 
 function moveCarousel() {
@@ -37,53 +56,42 @@ function moveCarousel() {
 // Pindah otomatis setiap 2 detik
 setInterval(moveCarousel, 2000);
 
-
-// // script.js
+// Swipe Functionality
 const container = document.querySelector('.touch-container');
-let startX = 0; // Posisi awal saat sentuhan dimulai
-let currentTranslate = 0; // Posisi translate saat ini
-let prevTranslate = 0; // Posisi translate sebelumnya
-let isDragging = false; // Status sentuhan aktif
+let startX = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let isDragging = false;
 
-// Menangani sentuhan awal
 container.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX; // Posisi awal sentuhan (x-axis)
+    startX = e.touches[0].clientX;
     isDragging = true;
 });
 
-// Menangani pergerakan sentuhan
 container.addEventListener('touchmove', (e) => {
     if (!isDragging) return;
     const currentX = e.touches[0].clientX;
     const movementX = currentX - startX;
     currentTranslate = prevTranslate + movementX;
-
-    // Menggeser box sesuai pergerakan sentuhan
     container.style.transform = `translateX(${currentTranslate}px)`;
 });
 
-// Menangani akhir sentuhan
 container.addEventListener('touchend', () => {
     isDragging = false;
     prevTranslate = currentTranslate;
 
-    // Opsi: Batasi geser ke kiri/kanan agar tidak keluar dari area kontainer
-    const maxScroll = -(container.scrollWidth - container.clientWidth); // Geser maksimal
+    // Batasi geser agar tidak keluar dari container
+    const maxScroll = -(container.scrollWidth - container.clientWidth);
     if (currentTranslate > 0) {
         currentTranslate = 0;
     } else if (currentTranslate < maxScroll) {
         currentTranslate = maxScroll;
     }
 
-    // Kembalikan posisi ke batas terdekat
     container.style.transition = 'transform 0.3s ease-out';
     container.style.transform = `translateX(${currentTranslate}px)`;
-    prevTranslate = currentTranslate;
 
-    // Matikan transisi setelah animasi selesai
     setTimeout(() => {
         container.style.transition = 'none';
     }, 300);
 });
-
-
