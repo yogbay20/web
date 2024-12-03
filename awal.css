@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .welcome-container {
+    text-align: center;
+  }
+
+  .welcome-text {
+    font-size: 2.5rem;
+    color: #333;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 2s ease-out forwards;
+  }
+
+  .sub-text {
+    font-size: 1.5rem;
+    color: #555;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards 2s;
+  }
+
+  .sub-text p{
+    font-family: "Parisienne", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+  }
+
+  .sub-text {
+    font-family: "Bangers", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn a {
+    padding: 20px;
+    background-color: rgb(53, 174, 255);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .1s ease-in-out;
+  }
+
+  .btn a:hover {
+    background-color: rgb(13, 154, 248);
+  }
