@@ -5,7 +5,7 @@ body {
     height: 100%;
     overflow-x: hidden;
   }
-  
+
 .cover {
     background-image: url(asset/bg.png);
     background-position: center;
@@ -44,7 +44,6 @@ body {
     font-family: "Bangers", serif;
     font-weight: 400;
     font-style: normal;
-
     font-size: 50px;
   }
   
@@ -359,7 +358,6 @@ body {
   .listsatu p span{
     color: gold;
   }
-=======
 } */
 
 .list {

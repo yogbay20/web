@@ -11,6 +11,8 @@
      if (username === validUsername && password === validPassword) {
          alert("Login berhasil!");
          window.location.href = "web.html"; // Alihkan ke halaman lain
+
+         window.location.href = "halaman.html"; // Alihkan ke halaman lain
      } else {
          errorMessage.style.display = "block"; // Tampilkan pesan error
      }
