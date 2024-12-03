@@ -10,7 +10,7 @@
      // Cek username dan password
      if (username === validUsername && password === validPassword) {
          alert("Login berhasil!");
-         window.location.href = "index.html"; // Alihkan ke halaman lain
+         window.location.href = "halaman.html"; // Alihkan ke halaman lain
      } else {
          errorMessage.style.display = "block"; // Tampilkan pesan error
      }
