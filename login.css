@@ -4,15 +4,33 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    /* background-image: url('asset/loginbg.png'); */
+}
+
+.background {
+    background-image: url('asset/loginbg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    filter: blur(5px); /* Apply blur to the background */
+    z-index: -1; /* Put the background behind other content */
 }
 
 .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px); 
     width: 300px;
     padding: 20px;
-    background-color: white;
+    /* background-color: white; */
+    background-color: rgba(0, 0, 0, 0.5); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
+    color: #fff;
 }
 
 .login-container h2 {
@@ -36,12 +54,14 @@ body {
     margin-left: -10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
 }
 
 .btn-login {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #48a0ff;
     color: white;
     border: none;
     border-radius: 5px;
